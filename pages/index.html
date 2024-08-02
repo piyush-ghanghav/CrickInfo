@@ -5,396 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>T20 CricInfo</title>
-
-    <link rel="stylesheet" href="../css/index1.css">
-    <link rel="stylesheet" href="../css/result.css">
-    <link rel="shortcut icon" href="../assets/cricketicon.ico" type="image/x-icon">
-
-    <script src="../js/script.js"></script>
-    <script src="../js/search.js"></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/search.js" defer></script>
 </head>
 
 <body>
-    <div class="na">
-        <nav class="navbar">
-            <img src="../assets/ball.jpeg" alt="image not found" id="logo">
-            <ul class="navv">
+    <header class="navbar">
+        <nav>
+            <ul>
                 <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="player.html" class="current">Players</a></li>
                 <li><a href="#Tool">Comparison Tool</a></li>
                 <li><a href="about.html">About us</a></li>
-
             </ul>
         </nav>
-    </div>
-    <br>
-    <br>
-    <br>
+    </header>
 
-    <div class="main">
-        <main>
-            <section>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td colspan="2" class="t1">
-                                <span class="Spacer2"><br>&nbsp;</span>
-                                Player Records
+    <main class="main-content">
+        <section class="alpha">
+            <h1>Player Records</h1>
+            <h2>Find Players</h2>
+            <p>Select a player from one of the following lists, or enter a name in the Find Player box to view his profile:</p>
 
-                            </td>
-
-                    </tbody>
-                </table>
-                <form>
-                    <div>
-                        <table cellpadding="0" cellspacing="0" width="1000">
-                            <tbody>
-                                <tr>
-                                    <td valign="top">
-                                        <div>
-                                            <ul class="dataa">
-                                                <li class="selected"><a href="#">Find Players</a></li>
-
-
-                                                <li class="#"><a href="T20.html">T20I</a></li>
-
-
-                                            </ul>
-                                            <div class="panel-container">
-                                                <div id="find_player">
-                                                    <table cellpadding="0" cellspacing="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td valign="top">
-                                                                    <!-- Find Player - Column 1 -->
-                                                                    <table width="400" cellpadding="4" cellspacing="0"
-                                                                        border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="TextBlack9" valign="top">
-                                                                                    Select a player from one
-                                                                                    of the following lists,
-                                                                                    or enter name in the
-                                                                                    Find Player box to view
-                                                                                    his profile:
-                                                                                </td>
-                                                                            </tr>
-
-                                                                            <br>
-                                                                            <tr>
-                                                                                <td class="TextBlack9">
-                                                                                    <br>
-                                                                                    <div class="TextBlack9">
-                                                                                        Alphabetical Lists :-
-                                                                                    </div>
-                                                                                    <br>
-
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('A')">A</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('B')">B</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('C')">C</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('D')">D</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('E')">E</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('F')">F</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('G')">G</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('H')">H</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('I')">I</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('J')">J</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('K')">K</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('L')">L</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('M')">M</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('N')">N</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('O')">O</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('P')">P</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('Q')">Q</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('R')">R</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('S')">S</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('T')">T</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('U')">U</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('V')">V</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('W')">W</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('X')">X</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('Y')">Y</button>
-                                                                                    <button type="button"
-                                                                                        class="abclist"
-                                                                                        onclick="navigateTo('Z')">Z</button>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-
-                                                                                <td class="TextBlack9">
-                                                                                    <br>
-                                                                                    Click a letter to list
-                                                                                    players whose name
-                                                                                    start with the selected
-                                                                                    letter.
-                                                                                </td>
-                                                                            </tr>
-
-                                                                            <tr>
-                                                                                <td class="Spacer2">
-                                                                                    &nbsp;
-                                                                                </td>
-                                                                            </tr>
-
-
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td width="50">&nbsp;</td>
-                                                                <td valign="top">
-                                                                    <br>
-                                                                    <div class="search-input">
-                                                                        <table width="100%" cellpadding="4"
-                                                                            cellspacing="0">
-                                                                            <tbody>
-                                                                                <div>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <div class="auto">
-                                                                                                <label
-                                                                                                    for="search-input1">Search
-                                                                                                    for : </label>
-                                                                                                <input type="text"
-                                                                                                    id="searchInput"
-                                                                                                    placeholder="Search..">
-                                                                                                <button type="button"
-                                                                                                    onclick="searchArray()">Search</button>
-                                                                                                <ul id="autos"></ul>
-                                                                                                <br>&nbsp;&nbsp;&nbsp;
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </div>
-                                                                                <tr>
-                                                                                    <td class="Spacer2">
-                                                                                        &nbsp;
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="Spacer2">
-                                                                                        &nbsp;
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="Spacer2">
-                                                                                        &nbsp;
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td class="TextBlack9">Enter the
-                                                                                        full name of the player. Keep
-                                                                                        first letter of
-                                                                                        firstname and lastname capital.
-                                                                                        After entering full name click
-                                                                                        on the search
-                                                                                        button</td>
-                                                                                </tr>
-
-
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </form>
-
-
-
-            </section>
-        </main>
-    </div>
-    <br>
-    <br>
-    <h3>Search Result: </h3>
-    <div class="Result">
-        <table id="data_output" class="resultT">
-
-        </table>
-        <table id="Bowldata_output" class="resultT">
-
-        </table>
-    </div>
-    <br>
-    <br>
-    <h3 id="Tool">Comparison Tool</h3>
-    <section>
-
-        <form>
-            <div>
-                <table border="0" cellpadding="0" cellspacing="0" width="1000">
-                    <tbody>
-                        <tr>
-                            <td valign="top">
-
-                                <div class="panel-container">
-                                    <div id="find_player">
-                                        <table cellpadding="0" cellspacing="0" border="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <!-- Find Player - Column 1 -->
-                                                        <table width="400" cellpadding="4" cellspacing="0" border="0">
-                                                            <tbody>
-
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="autocomplete">
-                                                                            <label for="search-input">Player 1:</label>
-                                                                            <input type="text" id="searchInput1"
-                                                                                placeholder="Search">
-                                                                            <ul id="autocomplete-results"></ul>
-                                                                            <button type="button"
-                                                                                onclick="searchData()">Search</button>
-
-                                                                            <br>&nbsp;&nbsp;&nbsp;
-                                                                <tr id="Player1_result">
-                                                                </tr>
-
-                                    </div>
-                                </div>
-
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-                </table>
-                </td>
-                <td>
-                    <div>
-                        <table class="in">
-                            <tbody id="Compare">
-
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                        <table class="inn">
-                            <tbody id="Compare2">
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-                <td width="0">&nbsp;</td>
-                <td valign="top">
-
-                    <div>
-                        <table width="100%" cellpadding="4" cellspacing="0" border="0">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="autocompletee">
-                                            <label for="search-input2">Player 2:</label>
-                                            <input type="text" id="searchInput2" placeholder="Search..">
-                                            <button type="button" onclick="searchData()">Search</button>
-                                            <ul id="autocompletee-results"></ul>
-                                            <br>&nbsp;&nbsp;&nbsp;
-
-                                    </td>
-                                </tr>
-                                <tr id="Player2_result">
-
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-                </tr>
-                <tr id="compare_result">
-
-                </tr>
-                </tbody>
-                </table>
+            <div class="alpha-list">
+                <p>Alphabetical Lists:</p>
+                <button type="button" onclick="navigateTo('A')">A</button>
+                <button type="button" onclick="navigateTo('B')">B</button>
+                <button type="button" onclick="navigateTo('C')">C</button>
+                <button type="button" onclick="navigateTo('D')">D</button>
+                <button type="button" onclick="navigateTo('E')">E</button>
+                <button type="button" onclick="navigateTo('F')">F</button>
+                <button type="button" onclick="navigateTo('G')">G</button>
+                <button type="button" onclick="navigateTo('H')">H</button>
+                <button type="button" onclick="navigateTo('I')">I</button>
+                <button type="button" onclick="navigateTo('J')">J</button>
+                <button type="button" onclick="navigateTo('K')">K</button>
+                <button type="button" onclick="navigateTo('L')">L</button>
+                <button type="button" onclick="navigateTo('M')">M</button>
+                <button type="button" onclick="navigateTo('N')">N</button>
+                <button type="button" onclick="navigateTo('O')">O</button>
+                <button type="button" onclick="navigateTo('P')">P</button>
+                <button type="button" onclick="navigateTo('Q')">Q</button>
+                <button type="button" onclick="navigateTo('R')">R</button>
+                <button type="button" onclick="navigateTo('S')">S</button>
+                <button type="button" onclick="navigateTo('T')">T</button>
+                <button type="button" onclick="navigateTo('U')">U</button>
+                <button type="button" onclick="navigateTo('V')">V</button>
+                <button type="button" onclick="navigateTo('W')">W</button>
+                <button type="button" onclick="navigateTo('X')">X</button>
+                <button type="button" onclick="navigateTo('Y')">Y</button>
+                <button type="button" onclick="navigateTo('Z')">Z</button>
+                <p>Click a letter to list players whose names start with the selected letter.</p>
             </div>
-            </div>
-            </div>
-            </td>
-            </tr>
-            </tbody>
-            </table>
+        </section>
 
-            </div>
-        </form>
+        <section class="search">
+            <h3>Search Result:</h3>
+            <label for="searchInput">Search for:</label>
+            <input type="text" id="searchInput" placeholder="Search..">
+            <button type="button" onclick="searchArray()">Search</button>
+            <p>Enter the full name of the player. Keep the first letter of the first name and last name capitalized. After entering the full name, click the search button.</p>
+        </section>
 
+        <section class="comparison-tool">
+            <h3 id="Tool">Comparison Tool</h3>
+            <label for="searchInput1">Player 1:</label>
+            <input type="text" id="searchInput1" placeholder="Search">
+            <button type="button" onclick="searchData()">Search</button>
 
-
-    </section>
-    <br>
-    <br>
-
-
-
+            <label for="searchInput2">Player 2:</label>
+            <input type="text" id="searchInput2" placeholder="Search..">
+            <button type="button" onclick="searchData()">Search</button>
+        </section>
+    </main>
 </body>
 
 </html>
