@@ -7,166 +7,31 @@
     <title>Players</title>
     <link rel="stylesheet" href="../css/index1.css">
     <link rel="stylesheet" href="../css/player.css">
+    <script src="../js/player.js" defer></script>
 </head>
 <body>
-
     <nav class="navbar">
         <img src="../assets/ball.jpeg" alt="image not found" id="logo">
         <ul class="navv">
             <li><a href="index.html">Home</a></li>
             <li><a href="player.html">Players</a></li>
-           
         </ul>
     </nav>
-<br>
-<br>
-<br>
-<br>
-
-
-    
+    <br><br><br><br>
     <main>
-      <section>
-        <pre class="TextBlack9" style="margin-left: 0%;"><b style="color: red
-        ;">Note:</b> Enter the player type like batter, bowler and all rounder.
-  After every search do reload the page or it won't work.</pre>
-        <input type="text" id="input1" placeholder="Enter type of player">
-        <button type="button" onclick="buildTable(myArray)">Load</button>
-        <button type="button" onclick="buildTableall(myArray)">view all</button>
-        <pre class="TextBlack9" id="output"></pre>
-    </section>
         <section>
-            
-            <table>
-                <thead>
-                    <th>Player ID</th>
-                    <th class="name">Name</th>
-                    <th>Age</th>
-                    <th>Matches</th>
-                    <th>Bat innings</th>
-                    <th>Runs</th>
-                    <th>HS</th>
-                    <th>AVG</th>
-                    <th>Strike rate</th>
-                    <th>6's</th>
-                    <th>4's</th>
-                    <th>100's</th>
-                    <th>50's</th>
-                    <th>Batting Style</th>
-                    <th>Bowl innings</th>
-                    <th>wickets</th>
-                    <th>balls bowled</th>
-                    <th>runs given</th>
-                    <th>econ</th>
-                    <th>hattricks</th>
-                    <th>bowling srate</th>
-                    <th>bowl avg</th>
-                    
-                </thead>
-                <tbody id="data_output">
-                    <!-- Prodcuts from javascript file in here. -->
-                </tbody>
+            <pre class="TextBlack9" style="margin-left: 0%;"><b style="color: red;">Note:</b> Enter the player type like batter, bowler and all rounder. After every search do reload the page or it won't work.</pre>
+            <input type="text" id="input1" placeholder="Enter type of player">
+            <button type="button" onclick="loadFilteredPlayers()">Load</button>
+            <button type="button" onclick="loadAllPlayers()">View All</button>
+            <pre class="TextBlack9" id="output"></pre>
+        </section>
+        <section>
+            <table id="data_output">
+                <thead id="data_output_head"></thead>
+                <tbody id="data_output_body"></tbody>
             </table>
-           
-
         </section>
     </main>
-    <script>    
-        function buildTable(data){
-          var flag=0;
-          if(flag>0)
-          {
-            window.location.reload()
-          }
-          var search = document.getElementById("input1").value;
-            var table = document.getElementById('data_output')
-    
-            for (var i = 0; i < data.length; i++){
-              if (data[i].type==search){
-                flag++
-                var row = `<tr>
-                    <td>${data[i].Player_id}</td>
-                <td class="Name">${data[i].Name}</td>
-                <td>${data[i].age}</td>
-                <td>${data[i].matches}</td>
-                <td>${data[i].bat_innings}</td>
-                <td>${data[i].runs}</td>
-                <td>${data[i].HS}</td>
-                <td>${data[i].avg}</td>
-                <td>${data[i].strike_rate}</td>
-                <td>${data[i].six}</td>
-                <td>${data[i].four}</td>
-                <td>${data[i].hundreds}</td>
-                <td>${data[i].fifty}</td>
-                <td>${data[i].bat_style}</td>
-                <td>${data[i].bowl_innings}</td>
-                <td>${data[i].wickets}</td>
-                <td>${data[i].Ball_bowled}</td>
-                <td>${data[i].runs_given}</td>
-                <td>${data[i].econ}</td>
-                <td>${data[i].hattricks}</td>
-                <td>${data[i].bowl_strate}</td>
-                <td>${data[i].bowl_avg}</td>
-                
-                          </tr>`
-                          table.innerHTML += row
-
-                        }      
-            }
-            var count = document.getElementById("output")
-            var cc = `Total number of players of ${search} type is ${flag}`
-            count.innerHTML=cc
-            
-        }
-        function buildTableall(data){
-          var flag=0;
-         
-          
-          var search = document.getElementById("input1").value;
-            var table = document.getElementById('data_output')
-    
-            for (var i = 0; i < data.length; i++){
-              
-                flag++
-                var row = `<tr>
-                    <td>${data[i].Player_id}</td>
-                <td class="Name">${data[i].Name}</td>
-                <td>${data[i].age}</td>
-                <td>${data[i].matches}</td>
-                <td>${data[i].bat_innings}</td>
-                <td>${data[i].runs}</td>
-                <td>${data[i].HS}</td>
-                <td>${data[i].avg}</td>
-                <td>${data[i].strike_rate}</td>
-                <td>${data[i].six}</td>
-                <td>${data[i].four}</td>
-                <td>${data[i].hundreds}</td>
-                <td>${data[i].fifty}</td>
-                <td>${data[i].bat_style}</td>
-                <td>${data[i].bowl_innings}</td>
-                <td>${data[i].wickets}</td>
-                <td>${data[i].Ball_bowled}</td>
-                <td>${data[i].runs_given}</td>
-                <td>${data[i].econ}</td>
-                <td>${data[i].hattricks}</td>
-                <td>${data[i].bowl_strate}</td>
-                <td>${data[i].bowl_avg}</td>
-                
-                          </tr>`
-                          table.innerHTML += row
-
-                          
-            }
-            var count = document.getElementById("output")
-            var cc = `Total number of players is ${flag}`
-            count.innerHTML=cc
-            
-            
-        }
-
-        
-    
-    </script>
 </body>
-
 </html>
