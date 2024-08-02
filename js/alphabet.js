@@ -1,6 +1,5 @@
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log('URL Parameters:', urlParams.toString()); // Debug log
     return urlParams.get(name);
 }
 
@@ -34,18 +33,15 @@ function buildTableHeader() {
     `;
 }
 
-// Call the function to build the table header
-buildTableHeader();
-
-
 function buildTable(data, letter) {
-
-    
     const tableBody = document.getElementById('data_output_body');
     tableBody.innerHTML = ''; // Clear previous data
 
-    data.forEach(player => {
-        if (player.Name[0].toUpperCase() === letter) {
+    const filteredData = data.filter(player => player.Name[0].toUpperCase() === letter);
+
+    if (filteredData.length > 0) {
+        buildTableHeader(); // Build header only if there are players
+        filteredData.forEach(player => {
             const row = `
                 <tr>
                     <td>${player.Player_id}</td>
@@ -73,8 +69,10 @@ function buildTable(data, letter) {
                 </tr>
             `;
             tableBody.innerHTML += row;
-        }
-    });
+        });
+    } else {
+        tableBody.innerHTML = `<tr><td colspan="22">No players found starting with the letter '${letter}'.</td></tr>`;
+    }
 }
 
 // Fetch data and build the table based on query parameter
@@ -83,7 +81,6 @@ fetch('../data/data.json')
     .then(data => {
         if (Array.isArray(data.myData)) {
             const letter = getQueryParameter('letter');
-            console.log('Letter parameter:', letter); // Debug log
             if (letter) {
                 document.getElementById('page-title').innerText = `Players Starting with ${letter}`;
                 buildTable(data.myData, letter.toUpperCase());
