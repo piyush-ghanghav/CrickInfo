@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index1.css">
     <title>T20 CricInfo</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/search.js" defer></script>
+    <script src="../js/comparison.js" defer></script>
 </head>
 
 <body>
@@ -66,8 +68,12 @@
             <input type="text" id="searchInput" placeholder="Search..">
             <button type="button" onclick="searchArray()">Search</button>
             <p>Enter the full name of the player. Keep the first letter of the first name and last name capitalized. After entering the full name, click the search button.</p>
+            <div id="searchResults"></div>
+            <div id="data_output"></div>
+            <div id="Bowldata_output"></div>
+          
         </section>
-
+        
         <section class="comparison-tool">
             <h3 id="Tool">Comparison Tool</h3>
             <label for="searchInput1">Player 1:</label>
@@ -77,6 +83,17 @@
             <label for="searchInput2">Player 2:</label>
             <input type="text" id="searchInput2" placeholder="Search..">
             <button type="button" onclick="searchData()">Search</button>
+
+
+            <div class="player-container">
+                <div id="Player1_result" class="result"></div>
+                <div id="Player1_result_bowling" class="result"></div>
+              </div>
+              <div class="player-container">
+                <div id="Player2_result" class="result"></div>
+                <div id="Player2_result_bowling" class="result"></div>
+              </div>
+              
         </section>
     </main>
 </body>
