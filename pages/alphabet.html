@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players Filter</title>
-    <link rel="stylesheet" href="../css/index1.css">
-    <link rel="stylesheet" href="../css/alpha.css">
-    <link rel="stylesheet" href="../css/player.css">
+    <link rel="stylesheet" href="../css/alphabet.css"> <!-- Linking the CSS file -->
     <script src="../js/alphabet.js" defer></script>
 </head>
 <body>
     <header class="navbar">
+        <img src="../assets/ball.jpeg" alt="image not found" id="logo">
         <nav>
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
@@ -22,7 +21,13 @@
     </header>
     <h1 id="page-title">Players Starting with </h1>
     <table id="data_output">
-        <thead></thead>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Team</th>
+            </tr>
+        </thead>
         <tbody id="data_output_body">
             <!-- Table rows will be generated here -->
         </tbody>

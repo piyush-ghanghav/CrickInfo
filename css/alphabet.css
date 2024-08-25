@@ -1,0 +1,116 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font for a modern look */
+    background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: black; /* Navbar background color */
+    padding: 15px 20px; /* Padding for the navbar */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+#logo {
+    width: 95px; /* Logo width */
+    height: 59px; /* Logo height */
+    border-radius: 10%; /* Rounded corners for the logo */
+    margin-right: 20px; /* Space between logo and nav items */
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take remaining space */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: flex-start; /* Align navigation links to the left */
+}
+
+.navbar li {
+    margin-left: 20px; /* Space between links */
+}
+
+.navbar a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding around links */
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-weight: bold; /* Bold text for better visibility */
+}
+
+.navbar a:hover {
+    color: aqua; /* Change color on hover */
+    border-bottom: 2px solid aqua; /* Underline effect on hover */
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space between links */
+    }
+}
+
+/* Title Styles */
+#page-title {
+    font-size: 20px; /* Reduced font size for title */
+    text-align: center; /* Center the title */
+    padding: 15px 0; /* Padding around the title for readability */
+    color: #333; /* Darker color for better contrast */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Table width */
+    border-collapse: collapse; /* Merge borders */
+    table-layout: auto; /* Allow column widths to adjust based on content */
+    margin-top: 20px; /* Space above the table */
+}
+
+th {
+    background-color: #f2f2f2; /* Header row background color */
+    text-align: center; /* Center header text */
+    padding: 8px; /* Padding inside header cells */
+    font-size: 14px; /* Font size for header */
+    color: #555; /* Darker text for header */
+}
+
+td {
+    text-align: center; /* Center body text */
+    padding: 8px; /* Padding inside table cells */
+    border: 1px solid #ccc; /* Add border for clarity */
+    font-size: 12px; /* Reduced font size for table cells */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    table {
+        overflow-x: auto; /* Allow horizontal scrolling for the table if needed */
+        display: block; /* Make the table block for scrolling */
+    }
+}

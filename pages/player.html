@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players</title>
-    <link rel="stylesheet" href="../css/index1.css">
+    <!-- <link rel="stylesheet" href="../css/index1.css"> -->
     <link rel="stylesheet" href="../css/player.css">
     <script src="../js/player.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
-        <img src="../assets/ball.jpeg" alt="image not found" id="logo">
+        <img src="../assets/ball.jpeg" alt="Cricket ball logo" id="logo">
         <ul class="navv">
             <li><a href="index.html">Home</a></li>
             <li><a href="player.html">Players</a></li>
         </ul>
     </nav>
-    <br><br><br><br>
     <main>
         <section>
-            <p>Note:</b> Enter the player type like batter, bowler and all rounder. After every search do reload the page or it won't work.</p>
-            <input type="text" id="input1" placeholder="Enter type of player">
+            <p><strong>Note:</strong> Enter the player type like batter, bowler, or all-rounder. After every search, reload the page, or it won't work.</p>
+            <input type="text" id="input1" placeholder="Enter type of player" aria-label="Player type input">
             <button type="button" onclick="loadFilteredPlayers()">Load</button>
             <button type="button" onclick="loadAllPlayers()">View All</button>
             <pre class="TextBlack9" id="output"></pre>

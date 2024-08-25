@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index1.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- <link rel="stylesheet" href="../css/comparison.css"> -->
     <title>T20 CricInfo</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/search.js" defer></script>
@@ -14,50 +15,32 @@
 
 <body>
     <header class="navbar">
+        <img src="../assets/ball.jpeg" alt="Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
-                <li><a href="player.html" class="current">Players</a></li>
-                <li><a href="#Tool">Comparison Tool</a></li>
-                <li><a href="about.html">About us</a></li>
+                <li><a href="player.html">Players</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
-
+    
+    <h1 >Player Records</h1>
+    <h2>Find Players</h2>
     <main class="main-content">
         <section class="alpha">
-            <h1>Player Records</h1>
-            <h2>Find Players</h2>
             <p>Select a player from one of the following lists, or enter a name in the Find Player box to view his profile:</p>
 
             <div class="alpha-list">
                 <p>Alphabetical Lists:</p>
-                <button type="button" onclick="navigateTo('A')">A</button>
-                <button type="button" onclick="navigateTo('B')">B</button>
-                <button type="button" onclick="navigateTo('C')">C</button>
-                <button type="button" onclick="navigateTo('D')">D</button>
-                <button type="button" onclick="navigateTo('E')">E</button>
-                <button type="button" onclick="navigateTo('F')">F</button>
-                <button type="button" onclick="navigateTo('G')">G</button>
-                <button type="button" onclick="navigateTo('H')">H</button>
-                <button type="button" onclick="navigateTo('I')">I</button>
-                <button type="button" onclick="navigateTo('J')">J</button>
-                <button type="button" onclick="navigateTo('K')">K</button>
-                <button type="button" onclick="navigateTo('L')">L</button>
-                <button type="button" onclick="navigateTo('M')">M</button>
-                <button type="button" onclick="navigateTo('N')">N</button>
-                <button type="button" onclick="navigateTo('O')">O</button>
-                <button type="button" onclick="navigateTo('P')">P</button>
-                <button type="button" onclick="navigateTo('Q')">Q</button>
-                <button type="button" onclick="navigateTo('R')">R</button>
-                <button type="button" onclick="navigateTo('S')">S</button>
-                <button type="button" onclick="navigateTo('T')">T</button>
-                <button type="button" onclick="navigateTo('U')">U</button>
-                <button type="button" onclick="navigateTo('V')">V</button>
-                <button type="button" onclick="navigateTo('W')">W</button>
-                <button type="button" onclick="navigateTo('X')">X</button>
-                <button type="button" onclick="navigateTo('Y')">Y</button>
-                <button type="button" onclick="navigateTo('Z')">Z</button>
+                <div class="button-container">
+                    <script>
+                        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        for (let letter of letters) {
+                            document.write(`<button type="button" onclick="navigateTo('${letter}')">${letter}</button>`);
+                        }
+                    </script>
+                </div>
                 <p>Click a letter to list players whose names start with the selected letter.</p>
             </div>
         </section>
@@ -71,30 +54,34 @@
             <div id="searchResults"></div>
             <div id="data_output"></div>
             <div id="Bowldata_output"></div>
-          
         </section>
         
-        <section class="comparison-tool">
-            <h3 id="Tool">Comparison Tool</h3>
-            <label for="searchInput1">Player 1:</label>
-            <input type="text" id="searchInput1" placeholder="Search">
-            <button type="button" onclick="searchData()">Search</button>
-
-            <label for="searchInput2">Player 2:</label>
-            <input type="text" id="searchInput2" placeholder="Search..">
-            <button type="button" onclick="searchData()">Search</button>
-
-
-            <div class="player-container">
-                <div id="Player1_result" class="result"></div>
-                <div id="Player1_result_bowling" class="result"></div>
-              </div>
-              <div class="player-container">
-                <div id="Player2_result" class="result"></div>
-                <div id="Player2_result_bowling" class="result"></div>
-              </div>
-              
+        <section class="comparison">
+            <h3 style="padding-bottom: 20px">Compare Player Statistics</h3>
+            <div class="comparison-inputs">
+                <div>
+                    <label for="searchInput1">Player 1:</label>
+                    <input type="text" id="searchInput1" placeholder="Enter Player 1 Name">
+                </div>
+                <div>
+                    <label for="searchInput2">Player 2:</label>
+                    <input type="text" id="searchInput2" placeholder="Enter Player 2 Name">
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="compareButton">Compare</button>
+            </div>
+            <div id="comparisonResults" class="comparison-tool">
+                <!-- Dynamic table will be inserted here -->
+                <div class="table-container">
+                    <table>
+                        <!-- Table content goes here -->
+                    </table>
+                </div>
+                
+            </div>
         </section>
+        
     </main>
 </body>
 

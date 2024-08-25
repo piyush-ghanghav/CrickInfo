@@ -1,58 +1,181 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
-table{
-	width:  1000px;
-	margin: 30px auto;
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-table th{
-	padding: 10px 0;
-	background-color: #f4f4f4;
-	/* background-color: #fff; */
-	border:  thin solid #d4d4d4;
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
 }
 
-
-table td{
-	padding: 10px;
-	border:  thin solid #d4d4d4;
-	width: 18%;
-	text-align: center;
-	background-color: #fff;
+/* Navbar Styles */
+.navbar {
+    background-color: black;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
 }
 
-
-table img{
-	width:  70%;
-	
+#logo {
+    width: 95px;
+    height: 59px;
+    border-radius: 10%;
+    margin-right: 20px;
 }
 
-table td.total-price{
-	font-weight: bold;
-	font-size: 22px;
-}
-table a{
-	text-decoration: none;
-	color: darkred;
-	background-color: #ffecef;
-	padding: 10px 15px;
-}
-table a:active{
-	background-color: #ccf4d6;
-	color:  green;
+nav {
+    flex-grow: 1;
 }
 
-table select{
-	padding: 10px;
-	width:  200px;
-	font-size: 16px;
-	border: thin solid #d4d4d4;
-	background-color: transparent;
-}
-table select:focus{
-	outline: none;
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
 }
 
-table img{
-	width:  60%;
+.navbar li {
+    margin-left: 20px;
 }
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: aqua;
+    border-bottom: 2px solid aqua;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+/* Main Section Styles */
+main {
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Make the header sticky */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    color: #555;
+    z-index: 1; /* Ensure header is above the table rows */
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+/* Set the table body to allow scrolling */
+tbody {
+    display: block;
+    max-height: 400px; /* Set max height for scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    width: 100%; /* Ensure it takes the full width */
+}
+
+/* Make the table header and body rows align properly */
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Fixed layout for consistent column width */
+    
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+/* Customize scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 4px; /* Width of the vertical scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+

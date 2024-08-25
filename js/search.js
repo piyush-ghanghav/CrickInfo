@@ -1,5 +1,7 @@
 function buildTable(headers, rows) {
   const table = document.createElement('table');
+  table.classList.add('data-table'); // Add class for styling
+
 
   const tableHead = document.createElement('thead');
   tableHead.innerHTML = ` <tr> ${headers.map(header => `<th>${header}</th>`).join('')} </tr>`;
