@@ -55,7 +55,7 @@ function renderBowlingData(player, tableId) {
 
 function searchArray() {
   const searchInput = document.getElementById('searchInput').value;
-  fetch('../data/data.json')
+  fetch(window.location.pathname.includes('pages') ? '../data/data.json' : 'data/data.json')
     .then(response => response.json())
     .then(data => {
       const index = data.myData.findIndex(myData => myData.Name === searchInput);
@@ -70,4 +70,34 @@ function searchArray() {
     .catch(error => {
       alert('Error retrieving JSON data: ' + error.message);
     });
+}
+
+class PlayerSearch {
+    static async searchPlayers(query) {
+        UI.showLoader();
+        try {
+            const response = await fetch('data/data.json');
+            const data = await response.json();
+            const results = data.filter(player => 
+                player.name.toLowerCase().includes(query.toLowerCase())
+            );
+            this.displayResults(results);
+        } catch (error) {
+            UI.showToast('Error searching players', 'error');
+        } finally {
+            UI.hideLoader();
+        }
+    }
+
+    static displayResults(players) {
+        const resultsDiv = document.getElementById('searchResults');
+        resultsDiv.innerHTML = players.map(player => `
+            <div class="player-card">
+                <h3>${player.name}</h3>
+                <p>Team: ${player.team}</p>
+                <p>Role: ${player.role}</p>
+                <button onclick="showPlayerDetails('${player.id}')">View Details</button>
+            </div>
+        `).join('');
+    }
 }

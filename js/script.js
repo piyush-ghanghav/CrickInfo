@@ -1,6 +1,4 @@
 function navigateTo(letter) {
-    console.log('Navigating to:', letter);
-    const url = `alphabet.html?letter=${letter}`;
-    console.log('Formed URL:', url);
-    window.location.assign(url);
+  // Redirect to the alphabet page with the selected letter
+  window.location.href = `pages/alphabet.html?letter=${letter}`;
 }
